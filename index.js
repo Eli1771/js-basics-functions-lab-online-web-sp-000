@@ -12,5 +12,18 @@ function distanceTravelledInFeet(startBlock, endBlock) {
 }
 
 function calculatesFarePrice(startBlock, endBlock) {
-  
+  feet = distanceTravelledInFeet(startBlock, endBlock);
+  switch(feet) {
+    case <= 400:
+      return 0;
+      break;
+    case > 400 && <= 2000: 
+      return (feet - 400) * .02; 
+      break;
+    case > 2000 && <= 2500;
+      return 20; 
+      break;
+    default: 
+      return 'cannot travel that far';
+  }
 }
